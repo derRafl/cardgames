@@ -21,11 +21,11 @@ func ExampleDeck_Draw() {
 
 	// Output:
 	// ┌───────┐
-	// │7      │
+	// │A      │
 	// │       │
-	// │   ♣   │
+	// │   ♦   │
 	// │       │
-	// │      7│
+	// │      A│
 	// └───────┘
 	// 31
 }
@@ -38,11 +38,11 @@ func ExampleDeck_Top() {
 
 	// Output:
 	// ┌───────┐
-	// │7      │
+	// │A      │
 	// │       │
-	// │   ♣   │
+	// │   ♦   │
 	// │       │
-	// │      7│
+	// │      A│
 	// └───────┘
 	// 32
 }
@@ -63,4 +63,13 @@ func ExampleDeck_Add() {
 	// │       │
 	// │      7│
 	// └───────┘
+}
+
+func ExampleDeck_Len() {
+	d := NewDeck32()
+	fmt.Println(d.Len())
+
+	// Output:
+	// 32
+
 }
