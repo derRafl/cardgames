@@ -28,7 +28,6 @@ func New(r Rank, s Suit) Card {
 // │       │
 // │      A│
 // └───────┘
-
 func (c Card) String() string {
 	lines := []string{
 		"┌───────┐",
@@ -43,5 +42,12 @@ func (c Card) String() string {
 	card_string_template := strings.Join(lines, "\n")
 	card_string := fmt.Sprintf(card_string_template, c.r, c.s, c.r)
 	return card_string
+}
 
+// Matches erwartet eine weitere Karte o und prüft,
+// ob c und o nach den MauMau-Regeln zusammenpassen.
+func (c Card) Matches(o Card) bool {
+	// Wenn Farbe oder Zahl gleich sind, passen die
+	// Karten zusammen
+	return c.r == o.r || c.s == o.s
 }
